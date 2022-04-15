@@ -1,4 +1,6 @@
 const express = require("express");
+const fs = require("fs");
+const https = require("https");
 const path = require("path");
 const stashql = require("stashql");
 const cors = require("cors");
@@ -25,9 +27,21 @@ const StashQL = new stashql(schema, redisCache);
 if (process.env.NODE_ENV === "production") {
   app.use("/build", express.static(path.join(__dirname, "../build")));
 
-  app.get("/*", (req, res) => {
-    return res.status(200).sendFile(path.join(__dirname, "../build/index.html"));
-  });
+  app.use("/.well-known", express.static(path.join(__dirname, '../static/.well-known'), { dotfiles: 'allow' }))
+
+  if (process.env.HAS_STASHQL_CERT === "true") {
+     app.get("/*", (req, res) => {
+       if (req.secure) {
+         return res.status(200).sendFile(path.join(__dirname, "../build/index.html"));
+       } else {
+         return res.redirect("https://" + req.headers.host + req.url);
+       }
+     });
+  } else {
+     app.get("/*", (req, res) => {
+         return res.status(200).sendFile(path.join(__dirname, "../build/index.html"));
+     });
+  }
 }
 
 app.post("/api/subscribe", subscribeController.subscribe, (req, res) => {
@@ -57,7 +71,16 @@ app.use((err, req, res, next) => {
 });
 
 app.listen(3000, () => {
-  console.log("Server listening on port: 3000");
+   console.log("Server listening on port: 3000");
 });
+
+if (process.env.NODE_ENV === "production" && process.env.HAS_STASHQL_CERT === "true") {
+   const privateKey = fs.readFileSync(process.env.STASHQL_PRIV_KEY_PATH, 'utf8');
+   const certificate = fs.readFileSync(process.env.STASHQL_CERT_PATH, 'utf8');
+   const credentials = {key: privateKey, cert: certificate};
+
+   const httpsServer = https.createServer(credentials, app);
+   httpsServer.listen(8443);
+} 
 
 module.exports = app;
