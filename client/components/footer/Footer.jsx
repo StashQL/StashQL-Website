@@ -12,11 +12,6 @@ import {Link} from 'react-router-dom';
 class Footer extends React.Component {
   render() {
     return (
-      // <div id="footer-box">
-      //   <FooterNav/>
-      //   <FooterLogos/>
-      //   <div id="copyright"><p >StashQL © 2022</p></div>
-      // </div>
 
       <div id="footer-box">
         <div className='footer-content'>
@@ -43,7 +38,7 @@ class Footer extends React.Component {
                 <a className='footer-icon' href='https://github.com/oslabs-beta/StashQL'>
                   <FaGithub style={{fontSize: '25px', color: '#fff'}}/>
                 </a>
-                <a className='footer-icon' href='https://github.com/oslabs-beta/StashQL'>
+                <a className='footer-icon' href='https://www.linkedin.com/company/stashql/'>
                   <FaLinkedinIn style={{fontSize: '25px', color: '#fff'}}/>
                 </a>
               </div>
@@ -51,8 +46,6 @@ class Footer extends React.Component {
           </div>
 
           <div id='footer-right-side'>
-            {/* <h4>USE STASHQL IN YOUR APPLICATION</h4>
-            <button id='npm-button'><FaNpm style={{color: '#CC3534'}} /></button> */}
             <h2>RELEVANT RESOURCES</h2>
 
             <div className='right-parent'>
@@ -63,8 +56,8 @@ class Footer extends React.Component {
               </div>
               <div className='right-right-child'>
                 <a className='footer-link' href='mailto:stashql.npm@gmail.com'>Contact</a>
-                <a className='footer-link' href='mailto:simonchn160@gmail.com'>Featured</a>
-                <a className='footer-link' href='mailto:simonchn160@gmail.com'>Product Hunt</a>
+                <a className='footer-link' href='https://medium.com/@hakudo.0909/stashql-efficiently-update-and-cache-your-graphql-queries-bd7b4a743da2'>Featured</a>
+                <a className='footer-link' href='https://www.producthunt.com/posts/stashql'>Product Hunt</a>
               </div>
             </div>
           </div>

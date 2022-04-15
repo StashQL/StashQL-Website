@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import vid from '../../images/caching3.mp4';
 
-// import filler from '../../../public/images/shepherd.png';
-// import feathers from '../../../public/images/feathers.png';
 
 const SectionFive = () => {
     return (

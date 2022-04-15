@@ -6,22 +6,6 @@ const TextArea3 = () => {
     return res.status(200).json(res.locals.data);
 });`;
   return (
-    // <div id="textarea-box">
-    //   <textarea
-    //     id="doc-code-block"
-    //     rows='5'
-    //     readOnly
-    //     value={docCodeBlockQueryHandler}
-    //   />
-    // </div>
-
-    // yellow rgb(197, 165, 197);
-    // green rgb(141, 200, 145);
-    // blue rgb(121, 182, 242);
-    // red rgb(252, 146, 158);
-    // orange rgb(250, 200, 99);
-
-    // purple #a3a3ff
 
     <div id="doc-code-block-3">
       <div>

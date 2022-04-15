@@ -20,11 +20,3 @@ const TextArea2 = () => {
   );
 };
 export default TextArea2;
-
-// yellow rgb(197, 165, 197);
-// green rgb(141, 200, 145);
-// blue rgb(121, 182, 242);
-// red rgb(252, 146, 158);
-// orange rgb(250, 200, 99);
-
-// purple #a3a3ff

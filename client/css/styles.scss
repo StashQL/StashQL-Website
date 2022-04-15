@@ -1143,7 +1143,7 @@ html, body {
     bottom: 0;
     width: 0;
     height: 3px;
-    background-color: #9A51F7;
+    background-color: #FC5CAC;
     transition: width 0.25s ease-out;
 }
 
@@ -1261,6 +1261,7 @@ html, body {
     display: flex;
     justify-content: space-evenly;
     width: 100%;
+    gap: 10px;
 }
 
 #submitBtn {
@@ -1360,6 +1361,12 @@ html, body {
     }
 }
 
+@media (max-width: 1300px) {
+    #innerContainer {
+        height: 735px;
+    }
+ }
+
 @media (max-width: 1150px) {
     #demoText {
         padding-left: 150px;
@@ -1446,7 +1453,7 @@ html, body {
     }
 
     #chart {
-        width: 97%;
+        width: 90%;
     }
 
     #rightSide {

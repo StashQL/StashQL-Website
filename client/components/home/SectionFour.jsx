@@ -6,10 +6,6 @@ import vid from '../../images/caching2.mp4';
 // import vid from '../../images/caching-2.mp4';
 
 
-// import filler from '../../../public/images/shepherd.png';
-// import electricity from '../../../public/images/electricity.png';
-// import coding from '../../../public/images/coding.png';
-
 const SectionFour = () => {
     return (
       <div id='section-four'>

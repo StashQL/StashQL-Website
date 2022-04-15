@@ -144,7 +144,9 @@ const Navbar = (props) => {
             <a href='https://twitter.com/StashQL'>
               <TwitterIcon onClick={props.demoAuthor} style={{color: 'black'}}/>
             </a>
-            <LinkedInIcon style={{color: 'black'}}/>
+            <a href='https://www.linkedin.com/company/stashql/'>
+              <LinkedInIcon style={{color: 'black'}}/>
+            </a>
             <a href='https://www.npmjs.com/package/stashql'>
               <FaNpm onClick={props.demoAuthor} style={{color: '#CC3534', fontSize: '35px'}}/>
             </a>

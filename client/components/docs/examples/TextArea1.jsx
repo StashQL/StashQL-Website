@@ -12,8 +12,3 @@ const TextArea1 = () => {
 };
 export default TextArea1;
 
-// rgb(197, 165, 197);
-// rgb(141, 200, 145);
-// rgb(121, 182, 242);
-// rgb(252, 146, 158);
-// rgb(250, 200, 99);

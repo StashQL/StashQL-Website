@@ -119,9 +119,9 @@ const Demo = (props) => {
 
       <div id='demoText'>
          <h1>See first-hand what StashQL can do for your GraphQL applications</h1>
-         <p>Upon the first time submitting the query above, StashQL will cache the returned data. Running the query again will retrieve the data from the cache, resulting in faster queries and improved performance.</p>
+         <p>Upon the first time submitting the query below, StashQL will cache the returned data. Running the query again will retrieve the data from the cache, resulting in faster queries and improved performance.</p>
          <h2>What about mutations?</h2>
-         <p>In the mutation example above, the refillCache argument is passed in with a value of "authors". Upon seeing this, StashQL will update any data within the cache that queried for authors</p>
+         <p>In the mutation example below, the refillCache argument is passed in with a value of "authors". Upon seeing this, StashQL will update any cached authors data.</p>
        </div>
 
       <div id='demoContainer'>
@@ -175,7 +175,7 @@ const Demo = (props) => {
                     color: '#fff'
                   },
                   min: 0,
-                  max: 500,
+                  max: 700,
                   ticks: {
                     color: '#868792',
                     font: {
@@ -210,4 +210,3 @@ const Demo = (props) => {
 }
 
 export default Demo;
-
